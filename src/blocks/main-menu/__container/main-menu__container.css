@@ -1,0 +1,13 @@
+@import url('./_theme/_black/main-menu__container_theme_black.css');
+@import url('./_theme/_white/main-menu__container_theme_white.css');
+
+.main-menu__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  padding: 12px 19px 12px 19px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  margin-left: 34px;
+}

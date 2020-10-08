@@ -1,0 +1,13 @@
+@import url('./__subtitle/saved-result__subtitle.css');
+@import url('./__title/saved-result__title.css');
+@import url('./__words/saved-result__words.css');
+@import url('./__bold/saved-result__bold.css');
+
+.saved-result {
+  margin: 0;
+  padding-left: 102px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

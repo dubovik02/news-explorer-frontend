@@ -1,0 +1,21 @@
+@import url('./_selected/main-menu__item_selected.css');
+@import url('./_theme/_white/main-menu__item_theme_white.css');
+@import url('./_theme/_black/main-menu__item_theme_black.css');
+
+.main-menu__item {
+  list-style: none;
+  margin-right: 34px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main-menu__item:nth-last-child(2) {
+  margin-right: 6px;
+}
+
+.main-menu__item:last-of-type {
+  margin-right: 0px;
+}

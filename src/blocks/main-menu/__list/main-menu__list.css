@@ -1,0 +1,7 @@
+.main-menu__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+}

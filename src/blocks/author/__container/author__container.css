@@ -1,0 +1,8 @@
+.author__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 279px;
+  margin-left: 56px;
+  max-width: 600px;
+}

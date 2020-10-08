@@ -1,0 +1,10 @@
+.result__search-msg {
+  margin: 24px auto auto auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #B6BCBF;
+  max-width: 300px;
+}

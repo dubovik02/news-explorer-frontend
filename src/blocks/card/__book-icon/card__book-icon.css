@@ -1,0 +1,9 @@
+@import url('./_normal/card__book-icon_normal.css');
+@import url('./_hover/card__book-icon_hover.css');
+@import url('./_marked/card__book-icon_marked.css');
+
+.card__book-icon {
+  width: 14px;
+  height: 19px;
+  margin: 0 auto;
+}

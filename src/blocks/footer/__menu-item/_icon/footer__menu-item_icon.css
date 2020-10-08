@@ -1,0 +1,7 @@
+.footer__menu-item_icon {
+  margin-right: 28px;
+}
+
+.footer__menu-item_icon:last-of-type {
+  margin-right: 0;
+}

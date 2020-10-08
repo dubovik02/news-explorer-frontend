@@ -1,0 +1,7 @@
+.button_color_blue {
+  background: #2F71E5;
+}
+
+.button_color_blue:hover {
+  background: #347EFF;
+}

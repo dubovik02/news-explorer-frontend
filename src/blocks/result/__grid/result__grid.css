@@ -1,0 +1,9 @@
+@import url('../../card/card.css');
+
+.result__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 16px 16px;
+  justify-content: flex-start;
+  margin: 0;
+}

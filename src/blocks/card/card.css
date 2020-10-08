@@ -1,0 +1,25 @@
+@import url('./__book-icon/card__book-icon.css');
+@import url('./__date/card__date.css');
+@import url('./__description/card__description.css');
+@import url('./__image-container/card__image-container.css');
+@import url('./__image/card__image.css');
+@import url('./__source/card__source.css');
+@import url('./__subtitle/card__subtitle.css');
+@import url('./__title/card__title.css');
+@import url('./__book-button/card__book-button.css');
+@import url('./__login-msg/card__login-msg.css');
+@import url('./__trash-button/card__trash-button.css');
+@import url('./__trash-icon/card__trash-icon.css');
+@import url('./__word-msg/card__word-msg.css');
+@import url('./__trash-msg/card__trash-msg.css');
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #FFFFFF;
+  border-radius: 8px;
+  /* height: 576px; */
+  text-decoration: none;
+  color: black;
+}

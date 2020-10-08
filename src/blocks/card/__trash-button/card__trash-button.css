@@ -1,0 +1,12 @@
+.card__trash-button {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 8px;
+  position: absolute;
+  top: 24px;
+  left: 336px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.result__button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  background: #FFFFFF;
+  border-radius: 80px;
+  margin: 0 auto;
+  margin-top: 64px;
+  padding: 18px 84px 21px 84px;
+}
