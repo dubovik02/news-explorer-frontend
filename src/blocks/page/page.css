@@ -1,4 +1,5 @@
 .page {
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', 'Roboto Slab', 'Source Sans Pro', 'Inter', Arial, sans-serif;
 }

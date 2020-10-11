@@ -3,7 +3,10 @@
 @import url('./_marked/card__book-icon_marked.css');
 
 .card__book-icon {
-  width: 14px;
+  /* width: 14px;
   height: 19px;
-  margin: 0 auto;
+  margin: 0 auto; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35%;
 }

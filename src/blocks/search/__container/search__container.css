@@ -1,7 +1,6 @@
 .search__container {
   margin-bottom: 80px;
   position: relative;
-  /* width: 608px; */
   width: 100%;
   height: 64px;
 }
@@ -9,7 +8,6 @@
 /*---------------768px-----------------*/
 @media screen and (min-width: 611px) and (max-width: 768px) {
   .search__container {
-    /* width: 100%; */
     height: 56px;
     margin-bottom: 48px;
   }
@@ -19,7 +17,6 @@
 @media screen and (max-width: 610px) {
   .search__container {
     margin-bottom: 32px;
-    /* width: 100%; */
     height: auto;
   }
 }

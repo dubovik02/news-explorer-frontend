@@ -27,25 +27,25 @@
                   <a class="link main-menu__link" href="./saved.html" target="_blank">Сохраненные статьи</a>
                   <!--для отладки открываем пока в новом окне. в продакшене удалится-->
                 </li>
-                <div class="main-menu__container main-menu__container_theme_black">
-                  <li class="main-menu__item">
-                    <a class="link main-menu__link" href="#" target="_blank">
-                      <p class="main-menu__username">Грета</p>
-                      <img src="<%=require('./images/logout.png').default%>" alt="выход" class="main-menu__ico">
-                    </a>
-                  </li>
-                </div>
+                <li class="main-menu__item">
+                  <ul class="main-menu__container main-menu__container_theme_black">
+                    <li class="main-menu__item">
+                      <a class="link main-menu__link" href="#" target="_blank">
+                        <p class="main-menu__username">Грета</p>
+                        <img src="<%=require('./images/logout.png').default%>" alt="выход" class="main-menu__ico">
+                      </a>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </nav>
-            <button class="header__button">
-              <div class="header__icon header__icon_theme_black_show"></div>
-            </button>
+            <button class="header__button header__icon header__icon_theme_black_show"></button>
           </header>
           <!----------------------------------------------Поиск------------------------------------------------>
           <section class="search">
-            <p class="search__title">Что в мире творится?</p>
+            <h1 class="search__title">Что в мире творится?</h1>
             <p class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
-            <form action="" class="search__container">
+            <form class="search__container">
               <input class="input search__input" type="text" id="search-input" placeholder="Введите тему новости">
               <button class="button button_color_blue search__button">Искать</button>
             </form>
@@ -53,12 +53,12 @@
         </div>
         <!----------------------------------------------Результаты поиска------------------------------------------------>
         <section class="result">
-          <p class="result__title">Результаты поиска</p>
+          <h2 class="result__title">Результаты поиска</h2>
           <div class="result__grid">
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
-                <button class="card__book-button"><div class="card__book-icon card__book-icon_normal"></div></button>
+                <div class="card__book-button card__book-icon card__book-icon_normal"></div>
                 <div class="card__login-msg">Войдите, чтобы сохранять статьи</div>
               </div>
               <div class="card__description">
@@ -71,7 +71,7 @@
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
-                <button class="card__book-button"><div class="card__book-icon card__book-icon_normal"></div></button>
+                <div class="card__book-button card__book-icon card__book-icon_normal"></div>
                 <div class="card__login-msg">Войдите, чтобы сохранять статьи</div>
               </div>
               <div class="card__description">
@@ -84,7 +84,7 @@
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
-                <button class="card__book-button"><div class="card__book-icon card__book-icon_marked"></div></button>
+                <div class="card__book-button card__book-icon card__book-icon_marked"></div>
               </div>
               <div class="card__description">
                 <p class="card__date">10 октября, 2020</p>
@@ -96,7 +96,7 @@
               </div>
             </a>
           </div>
-          <form action="" class="result__form">
+          <form class="result__form">
             <button class="button button_color_white result__button">Показать еще</button>
           </form>
         </section>
@@ -115,7 +115,7 @@
         <section class="author">
           <img src="<%=require('./images/author.png').default%>" alt="автор" class="author__photo">
           <div class="author__container">
-            <p class="author__title">Об авторе</p>
+            <h2 class="author__title">Об авторе</h2>
             <p class="author__subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
               чем вы занимаетесь, какими технологиями разработки владеете.
             </p>
@@ -130,16 +130,16 @@
             <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
             <h3 class="popup__title">Регистрация</h3>
             <form class="popup__form" name="registration">
-              <label for="email" class="popup__label">Email</label>
-              <input type="email" name="email" class="input popup__input" placeholder="Введите email">
+              <label for="email-field" class="popup__label">Email</label>
+              <input type="email" name="email" id="email-field" class="input popup__input" placeholder="Введите email">
               <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
 
-              <label for="password" class="popup__label">Пароль</label>
-              <input type="password" name="password" class="input popup__input" placeholder="Введите пароль">
+              <label for="password-field" class="popup__label">Пароль</label>
+              <input type="password" name="password"  id="password-field" class="input popup__input" placeholder="Введите пароль">
               <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
 
-              <label for="password" class="popup__label">Имя</label>
-              <input type="text" name="name" class="input popup__input" placeholder="Введите свое имя">
+              <label for="name-field" class="popup__label">Имя</label>
+              <input type="text" name="name" id="name-field" class="input popup__input" placeholder="Введите свое имя">
               <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
 
               <p class="popup__user-exists">Такой пользователь уже есть</p>
@@ -148,7 +148,7 @@
 
               <div class="popup__login-container">
                 <p class="popup__text">или</p>
-                <a href="#" class="link popup__link popup__link_small" href="#" target="_blank">Войти</a>
+                <a href="#" class="link popup__link popup__link_small" target="_blank">Войти</a>
               </div>
             </form>
           </div>
@@ -159,19 +159,19 @@
             <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
             <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="registration">
-              <label for="email" class="popup__label">Email</label>
-              <input type="email" name="email" class="input popup__input" placeholder="Введите email">
+              <label for="email-field-login" class="popup__label">Email</label>
+              <input type="email" name="email" id="email-field-login" class="input popup__input" placeholder="Введите email">
               <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
 
-              <label for="password" class="popup__label">Пароль</label>
-              <input type="password" name="password" class="input popup__input" placeholder="Введите пароль">
+              <label for="password-field-login" class="popup__label">Пароль</label>
+              <input type="password" name="password" id="password-field-login" class="input popup__input" placeholder="Введите пароль">
               <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
 
               <button type="button" class="button button_color_blue popup__button">Войти</button>
 
               <div class="popup__login-container">
                 <p class="popup__text">или</p>
-                <a href="#" class="link popup__link popup__link_small" href="#" target="_blank">Зарегистрироваться</a>
+                <a href="#" class="link popup__link popup__link_small" target="_blank">Зарегистрироваться</a>
               </div>
             </form>
           </div>
@@ -181,7 +181,7 @@
           <div class="popup__content">
             <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
             <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-            <a href="#" class="link popup__link popup__link_large" href="#" target="_blank">Войти</a>
+            <a href="#" class="link popup__link popup__link_large" target="_blank">Войти</a>
           </div>
         </div>
       </main>
@@ -197,7 +197,7 @@
               <a href="https://praktikum.yandex.ru" class="link footer__link" target="_blank">Яндекс.Практикум</a>
             </li>
           </ul>
-          <div class="footer__icon-container">
+          <ul class="footer__icon-container">
             <li class="footer__menu-item footer__menu-item_icon">
               <a href="https://github.com/dubovik02/news-explorer-frontend" class="link footer__link" target="_blank">
                 <img src="<%=require('./images/github.png').default%>" alt="https://github.com/dubovik02/news-explorer-frontend" class="footer__icon">
@@ -208,14 +208,10 @@
                 <img src="<%=require('./images/facebook.png').default%>" alt="https://facebook.com" class="footer__icon">
               </a>
             </li>
-          </div>
+          </ul>
         </nav>
       </footer>
     </div>
     <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
-
-<!--
-  закомментированные строки
--->

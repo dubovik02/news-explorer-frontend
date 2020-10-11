@@ -23,25 +23,25 @@
             <li class="main-menu__item main-menu__item_selected main-menu__item_theme_white">
               <a class="link main-menu__link" href="./saved">Сохраненные статьи</a>
             </li>
-            <div class="main-menu__container main-menu__container_theme_white">
-              <li class="main-menu__item">
-                <a class="link main-menu__link" href="#" target="_blank">
-                  <p class="main-menu__username">Грета</p>
-                  <img src="<%=require('./images/logout_black.png').default%>" alt="выход" class="main-menu__ico">
-                </a>
-              </li>
-            </div>
+            <li class="main-menu__item">
+              <ul class="main-menu__container main-menu__container_theme_white">
+                <li class="main-menu__item">
+                  <a class="link main-menu__link" href="#" target="_blank">
+                    <p class="main-menu__username">Грета</p>
+                    <img src="<%=require('./images/logout_black.png').default%>" alt="выход" class="main-menu__ico">
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
-        <button class="header__button">
-          <div class="header__icon header__icon_theme_white_close"></div>
-        </button>
+        <button class="header__button header__icon header__icon_theme_white_show"></button>
       </header>
       <!----------------------------------------------Содержание---------------------------------------------------->
       <main class="content">
       <!----------------------------------------------Статистика сохраненного------------------------------------------------>
         <section class="saved-result">
-          <p class="saved-result__subtitle">Сохранённые статьи</p>
+          <h2 class="saved-result__subtitle">Сохранённые статьи</h2>
           <p class="saved-result__title">Грета, у вас 5 сохранённых статей</p>
           <p class="saved-result__words">По ключевым словам:
             <span class="saved-result__bold">Природа, Тайга</span> и <span class="saved-result__bold">2-м другим</span>
@@ -53,7 +53,7 @@
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
-                <button class="card__trash-button"><div class="card__trash-icon"></div></button>
+                <div class="card__trash-button card__trash-icon"></div>
                 <div class="card__trash-msg">Убрать из сохраненных</div>
                 <div class="card__word-msg">Flex-box</div>
               </div>
@@ -67,7 +67,7 @@
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
-                <button class="card__trash-button"><div class="card__trash-icon"></div></button>
+                <div class="card__trash-button card__trash-icon"></div>
                 <div class="card__trash-msg">Убрать из сохраненных</div>
                 <div class="card__word-msg">Гидрометцентр</div>
               </div>
@@ -83,7 +83,7 @@
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
-                <button class="card__trash-button"><div class="card__trash-icon"></div></button>
+                <div class="card__trash-button card__trash-icon"></div>
                 <div class="card__trash-msg">Убрать из сохраненных</div>
                 <div class="card__word-msg">Аргентина</div>
               </div>
@@ -99,7 +99,7 @@
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
-                <button class="card__trash-button"><div class="card__trash-icon"></div></button>
+                <div class="card__trash-button card__trash-icon"></div>
                 <div class="card__trash-msg">Убрать из сохраненных</div>
                 <div class="card__word-msg">Аргентина</div>
               </div>
@@ -125,7 +125,7 @@
               <a href="https://praktikum.yandex.ru" class="link footer__link" target="_blank">Яндекс.Практикум</a>
             </li>
           </ul>
-          <div class="footer__icon-container">
+          <ul class="footer__icon-container">
             <li class="footer__menu-item footer__menu-item_icon">
               <a href="https://github.com/dubovik02/news-explorer-frontend" class="link footer__link" target="_blank">
                 <img src="<%=require('./images/github.png').default%>" alt="https://github.com/dubovik02/news-explorer-frontend" class="footer__icon">
@@ -136,14 +136,10 @@
                 <img src="<%=require('./images/facebook.png').default%>" alt="https://facebook.com" class="footer__icon">
               </a>
             </li>
-          </div>
+          </ul>
         </nav>
       </footer>
     </div>
     <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
-
-<!--
-
--->

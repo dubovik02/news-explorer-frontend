@@ -6,7 +6,6 @@
   padding: 0;
   position: absolute;
   top: 24px;
-  /* left: 37.25%; */
   left: calc(100% - 24px - 40px - 5px - 182px);
   width: 182px;
   height: 40px;
@@ -23,15 +22,13 @@
   display: block;
 }
 
-.card__book-button:hover .card__book-icon {
+.card__book-button:hover {
   background-image: url('../../../images/book-hover.png');
 }
 
 /*---------------1279px-----------------*/
 @media screen and (min-width: 769px) and (max-width: 1279px) {
   .card__login-msg  {
-    /* top: 16px;
-    left: 15.2%; */
     top: 16px;
     left: calc(100% - 16px - 40px - 5px - 182px);
   }
