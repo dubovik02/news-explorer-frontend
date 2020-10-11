@@ -2,7 +2,7 @@
 @import url('./_color/_white/button_color_white.css');
 
 .button {
-
+  border: none;
 }
 
 .button:hover {

@@ -10,3 +10,17 @@
   line-height: 24px;
   text-align: center;
 }
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 540px) and (max-width: 768px) {
+  .footer__menu-item {
+
+  }
+}
+
+/*---------------539px-----------------*/
+@media screen and (max-width: 539px) {
+  .footer__menu-item {
+    margin-bottom: 38px;
+  }
+}

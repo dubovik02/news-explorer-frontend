@@ -11,3 +11,24 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .saved-result {
+    padding: 24px 16px 32px 40px;
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .saved-result {
+    padding: 24px 16px 32px 40px;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .saved-result {
+    padding: 8px 16px 32px 16px;
+  }
+}

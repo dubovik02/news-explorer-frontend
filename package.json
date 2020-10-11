@@ -47,5 +47,12 @@
   "bugs": {
     "url": "https://github.com/dubovik02/news-explorer-frontend/issues"
   },
-  "homepage": "https://github.com/dubovik02/news-explorer-frontend#readme"
+  "homepage": "https://github.com/dubovik02/news-explorer-frontend#readme",
+  "browserslist": [
+    "Chrome > 83",
+    "FireFox > 78",
+    "Safari > 13",
+    "Edge > 15",
+    "ChromeAndroid > 80"
+  ]
 }

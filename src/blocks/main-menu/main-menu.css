@@ -9,3 +9,14 @@
 
 .main-menu {
 }
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 650px) {
+  .main-menu {
+    position: absolute;
+    left: 0;
+    top: 56px;
+    width: 100vw;
+    display: none;
+  }
+}

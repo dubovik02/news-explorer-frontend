@@ -15,3 +15,11 @@
   padding: 21px 208px 21px 24px;
   width: 100%;
 }
+
+/*---------------610px-----------------*/
+@media screen and (max-width: 610px) {
+  .search__input {
+    position: static;
+    padding: 16px;
+  }
+}

@@ -4,8 +4,6 @@
 @import url('./__title/search__title.css');
 @import url('./__button/search__button.css');
 
-
-
 .search {
   display: flex;
   flex-direction: column;
@@ -13,6 +11,28 @@
   justify-content: center;
   align-items: flex-start;
   margin: 0 30.4% 0 30.4%;
+}
+
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .search {
+    margin: 0 20.8% 0 20.8%;
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .search {
+    margin: 0 20.8% 0 20.8%;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .search {
+    margin: 0;
+    padding: 16px 30px;
+  }
 }
 
 

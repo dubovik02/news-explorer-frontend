@@ -4,9 +4,80 @@
   background: #FFFFFF;
   border-radius: 8px;
   position: absolute;
+  /* top: 24px;
+  left: 84%; */
   top: 24px;
-  left: 336px;
+  left: calc(100% - 40px - 24px);
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+/*---------------1279px-----------------*/
+@media screen and (min-width: 1025px) and (max-width: 1279px) {
+  .card__trash-button  {
+    /* top: 16px;
+    left: 80.6%; */
+    top: 16px;
+    left: calc(100% - 40px - 16px);
+  }
+}
+
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .card__trash-button {
+    /* top: 16px;
+    left: 80%; */
+    top: 16px;
+    left: calc(100% - 40px - 16px);
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 721px) and (max-width: 768px) {
+  .card__trash-button {
+    /* top: 8px;
+    left: 77.1%; */
+    top: 8px;
+    left: calc(100% - 40px - 8px);
+  }
+}
+
+/*---------------720px-----------------*/
+@media screen and (min-width: 601px) and (max-width: 720px) {
+  .card__trash-button {
+    /* top: 8px;
+    left: 84.6%; */
+    top: 8px;
+    left: calc(100% - 40px - 8px);
+  }
+}
+
+/*---------------600px-----------------*/
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .card__trash-button {
+    /* top: 8px;
+    left: 78.5%; */
+    top: 8px;
+    left: calc(100% - 40px - 8px);
+  }
+}
+
+/*---------------499px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 499px) {
+  .card__trash-button {
+    /* top: 8px;
+    left: 72.4%; */
+    top: 8px;
+    left: calc(100% - 40px - 8px);
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .card__trash-button {
+    /* top: 16px; */
+    top: 16px;
+    left: calc(100% - 40px - 16px);
+  }
 }

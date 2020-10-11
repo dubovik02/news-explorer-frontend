@@ -3,3 +3,10 @@
   padding-bottom: 26px;
   /* border-bottom: 3px solid white; */
 }
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 650px) {
+  .main-menu__item_selected {
+    padding: 0;
+  }
+}

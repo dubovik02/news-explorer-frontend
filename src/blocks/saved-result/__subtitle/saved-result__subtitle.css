@@ -7,3 +7,17 @@
   color: rgba(26, 27, 34, 0.5);
   margin: 0;
 }
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .saved-result__subtitle {
+    font-size: 14px;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .saved-result__subtitle {
+    font-size: 12px;
+  }
+}

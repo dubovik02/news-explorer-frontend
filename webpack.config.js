@@ -7,7 +7,10 @@ const webpack = require('webpack');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: {
+      main: './src/index.js',
+      saved: './src/saved.js'
+    },
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].[chunkhash].js'
@@ -42,7 +45,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({filename: 'style.[contenthash].css'}),
+        new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
         new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.css$/g,
           cssProcessor: require('cssnano'),
@@ -54,11 +57,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
+            chunks: ['main'],
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
           inject: false,
           template: './src/saved.html',
+          chunks: ['saved'],
           filename: 'saved.html'
         }),
         new WebpackMd5Hash(),

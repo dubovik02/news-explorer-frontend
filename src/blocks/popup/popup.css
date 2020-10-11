@@ -23,3 +23,10 @@
   justify-content: center;
   display: none;
 }
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 540px) {
+  .popup {
+    top: 56px;
+  }
+}

@@ -1,3 +1,10 @@
 .main-menu__item_theme_white {
   border-bottom: 3px solid black;
 }
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 650px) {
+  .main-menu__item_theme_white {
+    border-bottom: none;
+  }
+}

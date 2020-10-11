@@ -1,6 +1,8 @@
 @import url('./__label/header__label.css');
 @import url('./_theme/_white/header_theme_white.css');
 @import url('./_theme/_black/header_theme_black.css');
+@import url('./__button/header__button.css');
+@import url('./__icon/header__icon.css');
 
 .header {
   display: flex;
@@ -8,4 +10,19 @@
   padding: 19px 104px 0px 104px;
   background: rgba(255, 255, 255, 0.01);
   /* box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2); */
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 650px) and (max-width: 768px) {
+  .header {
+    padding: 12px 40px 0px 40px;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 650px) {
+  .header {
+    padding: 16px 16px 16px 16px;
+    position: relative;
+  }
 }

@@ -10,3 +10,27 @@
   line-height: 24px;
   color: white;
 }
+
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .search__subtitle {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .search__subtitle {
+    margin-top: 16px;
+    margin-bottom: 48px;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .search__subtitle {
+    margin-top: 16px;
+    margin-bottom: 122px;
+  }
+}

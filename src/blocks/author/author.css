@@ -9,4 +9,26 @@
   margin: 80px 216px 80px 104px;
 }
 
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .author {
+    margin: 40px 40px 60px 40px;
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 701px) and (max-width: 768px) {
+  .author {
+    margin: 40px 40px 60px 40px;
+  }
+}
+
+/*---------------700px-----------------*/
+@media screen and (max-width: 700px) {
+  .author {
+    flex-direction: column;
+    margin: 32px 16px;
+  }
+}
+
 
