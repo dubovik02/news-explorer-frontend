@@ -13,7 +13,7 @@
 <body class="body">
     <div class="page">
       <!----------------------------------------------Заголовок------------------------------------------------>
-      <header class="header header_theme_white">
+      <!-- <header class="header header_theme_white">
         <p class="header__label header__label_theme_white">NewsExplorer</p>
         <nav class="main-menu main-menu_theme_white">
           <ul class="main-menu__list main-menu__list_theme_white">
@@ -28,7 +28,7 @@
                 <li class="main-menu__item">
                   <a class="link main-menu__link" href="#" target="_blank">
                     <p class="main-menu__username">Грета</p>
-                    <img src="<%=require('./images/logout_black.png').default%>" alt="выход" class="main-menu__ico">
+                    <img src="<%=require('./images/logout_white.png').default%>" alt="выход" class="main-menu__ico">
                   </a>
                 </li>
               </ul>
@@ -36,7 +36,7 @@
           </ul>
         </nav>
         <button class="header__button header__icon header__icon_theme_white_show"></button>
-      </header>
+      </header> -->
       <!----------------------------------------------Содержание---------------------------------------------------->
       <main class="content">
       <!----------------------------------------------Статистика сохраненного------------------------------------------------>
@@ -117,7 +117,7 @@
       </main>
       <!----------------------------------------------Footer------------------------------------------->
       <footer class="footer">
-        <p class="footer__copyright">&copy;2020 Supersite, Powered by News API</p>
+        <!-- <p class="footer__copyright">&copy;2020 Supersite, Powered by News API</p>
         <nav class="footer__nav">
           <ul class="footer__menu">
             <li class="footer__menu-item footer__menu-item_normal"><a href="./index.html" class="link footer__link">Главная</a></li>
@@ -128,7 +128,7 @@
           <ul class="footer__icon-container">
             <li class="footer__menu-item footer__menu-item_icon">
               <a href="https://github.com/dubovik02/news-explorer-frontend" class="link footer__link" target="_blank">
-                <img src="<%=require('./images/github.png').default%>" alt="https://github.com/dubovik02/news-explorer-frontend" class="footer__icon">
+                <img src="<%=require('./images/github.png').default%>" alt="https://github.com" class="footer__icon">
               </a>
             </li>
             <li class="footer__menu-item footer__menu-item_icon">
@@ -137,9 +137,9 @@
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> -->
       </footer>
     </div>
-    <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

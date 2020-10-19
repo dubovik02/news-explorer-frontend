@@ -5,12 +5,14 @@
 @import url('./__search-msg/result__search-msg.css');
 @import url('./__title-search-msg/result__title-search-msg.css');
 @import url('./__icon/result__icon.css');
+@import url('./_is-visible/result_is-visible.css');
 
 .result {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   padding: 80px 104px 80px 104px;
   background: #F5F6F7;
+  display: none;
 }
 
 /*---------------1024px-----------------*/

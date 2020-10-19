@@ -10,7 +10,7 @@
 }
 
 
-.popup:disabled {
+.button:disabled {
   color: #B6BCBF;
   background: #E6E8EB;
 }
