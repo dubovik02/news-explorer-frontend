@@ -1,6 +1,8 @@
 import BaseEditPopup from './BasePopupEdit';
-
-export default class UserPopup extends BaseEditPopup {
+/**
+ * Попап регистрации
+ */
+export default class SignUpPopup extends BaseEditPopup {
 
   _postSubmitFunction;
   _name;
@@ -66,24 +68,21 @@ export default class UserPopup extends BaseEditPopup {
 
   _submit() {
     const butText = this._buttonSubmit.textContent;
-    this._buttonSubmit.textContent = "Регистрация ....";
+    this._setButtonSubmitStatus("Регистрация ....", true);
     this._getUserInfoFromForm();
     this.getSubmitFunction().call(this, this.getName(), this.getPassword(), this.getEmail())
       .then((res) => {
-        this._buttonSubmit.textContent = butText;
+        this._setButtonSubmitStatus(butText, false);
         super._submit();
         this.getPostSubmitFunction().call(this);
         return res;
       })
       .catch((err) => {
-        if (err !== 409) {
-          this.getServerErrElement().textContent = `Ошибка выполнения. Код: ${err}`;
-        } else {
-          this.setDefaultError();
-        }
-        this.getServerErrElement().classList.add('popup__user-exists_is-visible');
-        this._buttonSubmit.textContent = butText;
-        return err;
+        err.json()
+        .then((errRes) => {
+          this._handleError(errRes, butText);
+        });
+
       });
   }
 

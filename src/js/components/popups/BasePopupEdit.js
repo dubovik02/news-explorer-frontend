@@ -87,15 +87,8 @@ export default class BaseEditPopup extends BasePopup {
      * Функция сабмита переопределяемая в наследниках.
      */
     _submit() {
-        //event.preventDefault();
         this.close();
     }
-
-    // open() {
-    //   this._form.reset();
-    //   this._formValidator._checkValidity();
-    //   super.open();
-    // }
 
     close() {
       if (this.getForm()) {
@@ -103,6 +96,24 @@ export default class BaseEditPopup extends BasePopup {
         this._formValidator._checkValidity();
       }
       super.close();
+    }
+
+    _handleError(errRes, butText) {
+      this.getServerErrElement().textContent = errRes.message;
+      this.getServerErrElement().classList.add('popup__user-exists_is-visible');
+      this._setButtonSubmitStatus(butText, false);
+    }
+
+    _setButtonSubmitStatus(caption, isDisabled) {
+      this._buttonSubmit.textContent = caption;
+
+      if (isDisabled) {
+        this._buttonSubmit.setAttribute('disabled', isDisabled);
+      }
+      else {
+        this._buttonSubmit.removeAttribute('disabled');
+      }
+
     }
 
 }

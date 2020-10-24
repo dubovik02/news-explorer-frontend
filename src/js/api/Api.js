@@ -6,8 +6,8 @@ import BaseApi from './BaseApi';
 
 export default class Api extends BaseApi {
 
-  constructor(serverHttp, userToken) {
-    super(serverHttp, userToken);
+  constructor(serverHttp) {
+    super(serverHttp, null);
   }
 
   /**
@@ -20,7 +20,6 @@ export default class Api extends BaseApi {
         method: 'POST',
 
         headers: {
-          // authorization: `${this._userToken}`,
           'Content-Type': 'application/json'
         },
 
@@ -42,7 +41,6 @@ export default class Api extends BaseApi {
         method: 'POST',
 
         headers: {
-          // authorization: `${this._userToken}`,
           'Content-Type': 'application/json'
         },
 
@@ -53,131 +51,71 @@ export default class Api extends BaseApi {
       }));
   }
 
-  /**------------------------------------------------------------------------------- */
-
   /**
-   * Загрузка данных автора с сервера
+   * Добавление карточки
    */
-  loadAuthorData() {
+  addCard(cardData) {
 
-    return this.parseResponse(fetch(`${this._serverHttp}/${this._cohortCode}/users/me`,
+    return this.parseResponse(fetch(`${this._serverHttp}/articles`,
       {
-        headers: {
-          authorization: `${this._userToken}`
-        }
-      }));
-  }
+        credentials: 'include',
 
-  /**
-   * Загрузка данных карточек с сервера
-   */
-  loadCards() {
-
-    return this.parseResponse(fetch(`${this._serverHttp}/${this._cohortCode}/cards`,
-      {
-        headers: {
-          authorization: `${this._userToken}`
-        }
-      }));
-
-  }
-
-  /**
-   * Обновляет данные автора
-   * @param {string} userName имя пользователя
-   * @param {string} userDesc описание пользователя
-   */
-  updateUserInfo(userName, userDesc) {
-
-    return this.parseResponse(fetch(`${this._serverHttp}/${this._cohortCode}/users/me`,
-      {
-        method: 'PATCH',
+        method: 'POST',
 
         headers: {
-          authorization: `${this._userToken}`,
+          authorization: `Bearer ${localStorage.getItem('jwt')}`,
           'Content-Type': 'application/json'
         },
 
         body: JSON.stringify({
-          name: userName,
-          about: userDesc
+          keyword: cardData.keyword,
+          title: cardData.title,
+          text: cardData.description,
+          source: cardData.source.name,
+          date: cardData.publishedAt,
+          link: cardData.url,
+          image: cardData.urlToImage
         })
+
       }));
   }
 
+  /**
+   * Получение списка карточек пользователя
+   */
+  getCards(userId) {
+
+    return this.parseResponse(fetch(`${this._serverHttp}/articles/${userId}`,
+      {
+        credentials: 'include',
+
+        method: 'GET',
+
+        headers: {
+          authorization: `Bearer ${localStorage.getItem('jwt')}`,
+          'Content-Type': 'application/json'
+        }
+
+      }));
+  }
 
   /**
    * Удаляет карточку с сервера
-   * @param {string} cardId идентификатор карточки
    */
   deleteCard(cardId) {
 
-    return this.parseResponse(fetch(`${this._serverHttp}/${this._cohortCode}/cards/${cardId}`,
+    return this.parseResponse(fetch(`${this._serverHttp}/articles/${cardId}`,
       {
+        credentials: 'include',
+
         method: 'DELETE',
 
         headers: {
-          authorization: `${this._userToken}`,
+          authorization: `Bearer ${localStorage.getItem('jwt')}`,
           'Content-Type': 'application/json'
         }
       }));
 
   }
 
-  /**
-   * Like карточки
-   * @param {string} cardId id карточки
-   */
-  likeCard(cardId) {
-
-    return this.parseResponse(fetch(`${this._serverHttp}/${this._cohortCode}/cards/like/${cardId}`,
-      {
-        method: 'PUT',
-
-        headers: {
-          authorization: `${this._userToken}`,
-          'Content-Type': 'application/json'
-        }
-      }));
-  }
-
-  /**
-  * Dislike карточки
-  * @param {string} cardId id карточки
-  */
-
-  dislikeCard(cardId) {
-
-    return this.parseResponse(fetch(`${this._serverHttp}/${this._cohortCode}/cards/like/${cardId}`,
-      {
-        method: 'DELETE',
-
-        headers: {
-          authorization: `${this._userToken}`,
-          'Content-Type': 'application/json'
-        }
-      }));
-
-  }
-
-  /**
-   * Обновляет аватар
-   * @param {string} newAvatarlink ссылка на аватар
-   */
-  updateAvatar(newAvatarlink) {
-
-    return this.parseResponse(fetch(`${this._serverHttp}/${this._cohortCode}/users/me/avatar`,
-      {
-        method: 'PATCH',
-
-        headers: {
-          authorization: `${this._userToken}`,
-          'Content-Type': 'application/json'
-        },
-
-        body: JSON.stringify({
-          avatar: newAvatarlink
-        })
-      }));
-  }
 }

@@ -1,3 +1,6 @@
+/**
+ * Попап приглашения к входу
+ */
 import BaseEditPopup from "./BasePopupEdit";
 
 export default class InvitePopup extends BaseEditPopup {

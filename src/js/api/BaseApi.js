@@ -31,14 +31,14 @@ export default class BaseApi {
   /**
    * Разбор ответа сервера
    * @param {Promise} resPromise первичный ответ
-   * @returns {Promise} ошибка или ответ в формате json
+   * @returns {Promise} ошибка или ответ
    */
   parseResponse(resPromise) {
 
     return resPromise
       .then((res) => {
         if (!res.ok) {
-          return Promise.reject(res.status);
+          return Promise.reject(res);
         }
         else {
           return res.json();

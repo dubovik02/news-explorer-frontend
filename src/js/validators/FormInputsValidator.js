@@ -14,6 +14,7 @@ export default class FormInputsValidator {
   _ERR_REQ_LINK_MESSAGE;
   _ERR_REQ_EMAIL_MESSAGE;
   _ERR_SIZE_PASSWORD_MESSAGE;
+  _ERR_ALLOW_LETTERS_MESSAGE;
 
   static MIN_STRING_LENGTH = 2;
   static MAX_STRING_LENGTH = 30;
@@ -34,6 +35,7 @@ export default class FormInputsValidator {
     this._ERR_REQ_LINK_MESSAGE = msgObj.LinkErrMessage;
     this._ERR_REQ_EMAIL_MESSAGE = msgObj.EmailErrMessage;
     this._ERR_SIZE_PASSWORD_MESSAGE = msgObj.PasswordLengthErrMessage;
+    this._ERR_ALLOW_LETTERS_MESSAGE = msgObj.AllowLettersMessage;
   }
 
 
@@ -99,18 +101,21 @@ export default class FormInputsValidator {
       return false;
     }
 
-    if (inputEl.validity.typeMismatch) {
-      if (inputEl.type === 'url') {
-        this._setErrors(inputEl, errEl, this._ERR_REQ_LINK_MESSAGE);
-        return false;
-      }
-      if (inputEl.type === 'email') {
-        this._setErrors(inputEl, errEl, this._ERR_REQ_EMAIL_MESSAGE);
-        return false;
-      }
+    if (inputEl.validity.typeMismatch && inputEl.type === 'url') {
+      this._setErrors(inputEl, errEl, this._ERR_REQ_LINK_MESSAGE);
+      return false;
     }
 
-    // return inputEl.checkValidity();
+    if (inputEl.validity.patternMismatch && inputEl.type === 'email') {
+      this._setErrors(inputEl, errEl, this._ERR_REQ_EMAIL_MESSAGE);
+      return false;
+    }
+
+    if (inputEl.validity.patternMismatch && inputEl.type === 'text') {
+      this._setErrors(inputEl, errEl, this._ERR_ALLOW_LETTERS_MESSAGE);
+      return false;
+    }
+
     return true;
 
   }

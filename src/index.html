@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Поиск новостей">
-    <meta name="author" content="A. Dubovik">
+    <meta name="author" content="Anton">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewsExplorer. Новости - это просто</title>
     <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
@@ -115,12 +115,11 @@
           <img src="<%=require('./images/author.png').default%>" alt="автор" class="author__photo">
           <div class="author__container">
             <h2 class="author__title">Об авторе</h2>
-            <p class="author__subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
-              чем вы занимаетесь, какими технологиями разработки владеете.
+            <p class="author__subtitle">Автор как всегда пожелал остаться неизвестным.
+              Проект - не идеален, но показателен. Со временем все подрастет.
+              В проекте задействованы HTML, CSS, JavaScript, Node.js, MongoDB, WebPack.
             </p>
-            <p class="author__subtitle">Также можно рассказать о процессе обучения
-              в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
-            </p>
+            <p class="author__subtitle">Все это - благодаря YPraktikum и вопреки лени и занятости.</p>
           </div>
         </section>
         <!-------------------------Регистрация пользователя ----------------------->
@@ -138,7 +137,7 @@
               <p class="popup__error-label popup__error-label-password"></p>
 
               <label for="name-field" class="popup__label">Имя</label>
-              <input type="text" name="name" id="name-field" class="input popup__input" placeholder="Введите свое имя" minlength="2" maxlength="30" pattern="[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)?" required>
+              <input type="text" name="name" id="name-field" class="input popup__input" placeholder="Введите свое имя" minlength="2" maxlength="30" pattern="[A-ZА-ЯЁa-zа-яё]+(-[A-ZА-ЯЁa-zа-яё]+)?" required>
               <p class="popup__error-label popup__error-label-password"></p>
 
               <p class="popup__user-exists">Такой пользователь уже есть</p>
@@ -159,7 +158,7 @@
             <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="form-signin">
               <label for="email-field-login" class="popup__label">Email</label>
-              <input type="email" name="email" id="email-field-login" class="input popup__input" placeholder="Введите email" required>
+              <input type="email" name="email" id="email-field-login" class="input popup__input" placeholder="Введите email" pattern="^[A-Za-z0-9](-|_)?(([A-Za-z0-9_]+-?)?)+[A-Za-z0-9]?@([A-Za-z0-9\-_]+\.)+[A-Za-z]{2,}" required>
               <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
 
               <label for="password-field-login" class="popup__label">Пароль</label>
