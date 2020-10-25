@@ -169,6 +169,7 @@ function signIn(userEmail, userPass) {
       makeHeader();
       searchResults.clearSectionContent();
       searchResults.hideSection();
+      showMenu();
       return res;
     })
     .catch((err) => {
@@ -188,6 +189,7 @@ function logout() {
   makeHeader();
   searchResults.clearSectionContent();
   searchResults.hideSection();
+  showMenu();
 }
 
 /**

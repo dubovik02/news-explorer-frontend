@@ -167,7 +167,13 @@ function afterDeleteCard() {
     infoSection.clearSectionContent();
     infoSection.setCardsList(cardsList);
     infoSection.renderSection();
-    favSection.setCurrentCardIndex(favSection.getCurrentCardIndex() - 1);
+    if (cardsList.getCardListLength() !== 0) {
+      favSection.setCurrentCardIndex(favSection.getCurrentCardIndex() - 1);
+    }
+    else {
+      favSection.renderEmptySaved();
+    }
+
   })
   .catch((err) => {
     alert(err);
