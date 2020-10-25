@@ -19,7 +19,7 @@ export default class InfoSection {
     const sectionDOM = `<h2 class="saved-result__subtitle">Сохранённые статьи</h2>
     <p class="saved-result__title">${this._userName}, у вас ${this._cardsList.getCardsList().length} сохранённых статей</p>
     <p class="saved-result__words">`
-    + (keyWords.length > 0 ? 'По ключевым словам:' : ``) +
+    + (keyWords.length > 0 ? 'По ключевым словам: ' : ``) +
     `<span class="saved-result__bold">${keyWordsStr}</span>`
     + (keyWords.length <= 3 ? '' : ` и `) + `<span class="saved-result__bold">`
     + (keyWords.length <= 3 ? '' : `${keyWords.length - 2} другим`)

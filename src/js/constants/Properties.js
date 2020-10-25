@@ -32,12 +32,12 @@ export default {
 
     newsapi: {
       token: '065f57bbb65d4e54b4f78c012bc3cffd',
-      url: 'https://newsapi.org',
+      url: 'https://nomoreparties.co/news',
       newsPeriod: 7,
     },
 
     newsexplorer: {
-      url: 'http://localhost:3000',
+      url: 'https://api.ne2020.tk',
     }
   },
 
