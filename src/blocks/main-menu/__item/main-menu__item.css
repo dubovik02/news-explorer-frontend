@@ -26,6 +26,10 @@
     margin-top: 26px;
   }
 
+  .main-menu__item:nth-last-child(2) {
+    margin-top: 0px;
+  }
+
   .main-menu__item:last-of-type {
     margin-top: 0px;
   }

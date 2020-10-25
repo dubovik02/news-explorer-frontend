@@ -1,3 +1,5 @@
+@import url('./_is-hide/main__menu__link_is-hide.css');
+
 .main-menu__link {
   display: flex;
   color: inherit;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Поиск новостей">
-    <meta name="author" content="A. Dubovik">
+    <meta name="author" content="Anton">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewsExplorer. Новости - это просто</title>
     <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
@@ -16,8 +16,8 @@
       <main class="content">
         <!----------------------------------------------Заголовок------------------------------------------------>
         <div class="main-section">
-          <header class="header header_theme_black">
-            <p class="header__label header__label header__label_theme_black">NewsExplorer</p>
+          <!-- <header class="header header_theme_black"> -->
+            <!-- <p class="header__label header__label header__label_theme_black">NewsExplorer</p>
             <nav class="main-menu main-menu_theme_black">
               <ul class="main-menu__list main-menu__list_theme_black">
                 <li class="main-menu__item main-menu__item_selected main-menu__item_theme_black">
@@ -25,36 +25,35 @@
                 </li>
                 <li class="main-menu__item">
                   <a class="link main-menu__link" href="./saved.html" target="_blank">Сохраненные статьи</a>
-                  <!--для отладки открываем пока в новом окне. в продакшене удалится-->
                 </li>
                 <li class="main-menu__item">
                   <ul class="main-menu__container main-menu__container_theme_black">
                     <li class="main-menu__item">
                       <a class="link main-menu__link" href="#" target="_blank">
                         <p class="main-menu__username">Грета</p>
-                        <img src="<%=require('./images/logout.png').default%>" alt="выход" class="main-menu__ico">
+                        <img src="<%=require('./images/logout_black.png').default%>" alt="выход" class="main-menu__ico">
                       </a>
                     </li>
                   </ul>
                 </li>
               </ul>
             </nav>
-            <button class="header__button header__icon header__icon_theme_black_show"></button>
-          </header>
+            <button class="header__button header__icon header__icon_theme_black_show"></button> -->
+          <!-- </header> -->
           <!----------------------------------------------Поиск------------------------------------------------>
           <section class="search">
             <h1 class="search__title">Что в мире творится?</h1>
             <p class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
             <form class="search__container">
-              <input class="input search__input" type="text" id="search-input" placeholder="Введите тему новости">
-              <button class="button button_color_blue search__button">Искать</button>
+              <input class="input search__input" type="text" id="search-input" placeholder="Введите тему новости" required>
+              <button type="button" class="button button_color_blue search__button">Искать</button>
             </form>
           </section>
         </div>
         <!----------------------------------------------Результаты поиска------------------------------------------------>
         <section class="result">
-          <h2 class="result__title">Результаты поиска</h2>
-          <div class="result__grid">
+          <!-- <h2 class="result__title">Результаты поиска</h2> -->
+          <!-- <div class="result__grid">
             <a class="link card" href="#" target="_blank">
               <div class="card__image-container">
                 <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
@@ -98,96 +97,97 @@
           </div>
           <form class="result__form">
             <button class="button button_color_white result__button">Показать еще</button>
-          </form>
+          </form>-->
         </section>
         <!----------------------------------------------Ожидание загрузки------------------------------------------------>
-        <section class="result">
+        <!-- <section class="result">
           <i class="circle-preloader"></i>
           <p class="result__search-msg">Идет поиск новостей...</p>
-        </section>
+        </section> -->
         <!----------------------------------------------Нет результатов------------------------------------------------>
-        <section class="result">
+        <!-- <section class="result">
           <div class="result__icon result__icon_notfound"></div>
           <p class="result__title-search-msg">Ничего не найдено</p>
           <p class="result__search-msg">К сожалению по вашему запросу ничего не найдено</p>
-        </section>
+        </section> -->
         <!----------------------------------------------Автор------------------------------------------------>
         <section class="author">
           <img src="<%=require('./images/author.png').default%>" alt="автор" class="author__photo">
           <div class="author__container">
             <h2 class="author__title">Об авторе</h2>
-            <p class="author__subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
-              чем вы занимаетесь, какими технологиями разработки владеете.
+            <p class="author__subtitle">Автор как всегда пожелал остаться неизвестным.
+              Проект - не идеален, но показателен. Со временем все подрастет.
+              В проекте задействованы HTML, CSS, JavaScript, Node.js, MongoDB, WebPack.
             </p>
-            <p class="author__subtitle">Также можно рассказать о процессе обучения
-              в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
-            </p>
+            <p class="author__subtitle">Все это - благодаря YPraktikum и вопреки лени и занятости.</p>
           </div>
         </section>
-        <!-------------------------Регистрация  пользователя ----------------------->
-        <div class="popup">
+        <!-------------------------Регистрация пользователя ----------------------->
+        <div class="popup popup-signup">
           <div class="popup__content">
-            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-signup__close">
             <h3 class="popup__title">Регистрация</h3>
-            <form class="popup__form" name="registration">
+            <form class="popup__form" name="form-signup">
               <label for="email-field" class="popup__label">Email</label>
-              <input type="email" name="email" id="email-field" class="input popup__input" placeholder="Введите email">
-              <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
+              <input type="email" name="email" id="email-field" class="input popup__input" placeholder="Введите email" pattern="^[A-Za-z0-9](-|_)?(([A-Za-z0-9_]+-?)?)+[A-Za-z0-9]?@([A-Za-z0-9\-_]+\.)+[A-Za-z]{2,}" required>
+              <p class="popup__error-label popup__error-label-name"></p>
 
               <label for="password-field" class="popup__label">Пароль</label>
-              <input type="password" name="password"  id="password-field" class="input popup__input" placeholder="Введите пароль">
-              <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
+              <input type="password" name="password"  id="password-field" class="input popup__input" minlength="8" placeholder="Введите пароль" required>
+              <p class="popup__error-label popup__error-label-password"></p>
 
               <label for="name-field" class="popup__label">Имя</label>
-              <input type="text" name="name" id="name-field" class="input popup__input" placeholder="Введите свое имя">
-              <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
+              <input type="text" name="name" id="name-field" class="input popup__input" placeholder="Введите свое имя" minlength="2" maxlength="30" pattern="[A-ZА-ЯЁa-zа-яё]+(-[A-ZА-ЯЁa-zа-яё]+)?" required>
+              <p class="popup__error-label popup__error-label-password"></p>
 
               <p class="popup__user-exists">Такой пользователь уже есть</p>
 
-              <button type="button" class="button button_color_blue popup__button">Зарегистрироваться</button>
+              <button type="button" class="button button_color_blue popup__button button__signup">Зарегистрироваться</button>
 
               <div class="popup__login-container">
                 <p class="popup__text">или</p>
-                <a href="#" class="link popup__link popup__link_small" target="_blank">Войти</a>
+                <a href="#" class="link popup__link popup__link_small popup-signup__login">Войти</a>
               </div>
             </form>
           </div>
         </div>
         <!-------------------------Вход ----------------------->
-        <div class="popup">
+        <div class="popup popup-signin">
           <div class="popup__content">
-            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-signin__close">
             <h3 class="popup__title">Вход</h3>
-            <form class="popup__form" name="registration">
+            <form class="popup__form" name="form-signin">
               <label for="email-field-login" class="popup__label">Email</label>
-              <input type="email" name="email" id="email-field-login" class="input popup__input" placeholder="Введите email">
+              <input type="email" name="email" id="email-field-login" class="input popup__input" placeholder="Введите email" pattern="^[A-Za-z0-9](-|_)?(([A-Za-z0-9_]+-?)?)+[A-Za-z0-9]?@([A-Za-z0-9\-_]+\.)+[A-Za-z]{2,}" required>
               <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
 
               <label for="password-field-login" class="popup__label">Пароль</label>
-              <input type="password" name="password" id="password-field-login" class="input popup__input" placeholder="Введите пароль">
+              <input type="password" name="password" id="password-field-login" class="input popup__input" placeholder="Введите пароль" required>
               <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
 
-              <button type="button" class="button button_color_blue popup__button">Войти</button>
+              <p class="popup__user-exists">Неверный логин или пароль</p>
+
+              <button type="button" class="button button_color_blue popup__button popup__button-signin">Войти</button>
 
               <div class="popup__login-container">
                 <p class="popup__text">или</p>
-                <a href="#" class="link popup__link popup__link_small" target="_blank">Зарегистрироваться</a>
+                <a href="#" class="link popup__link popup__link_small popup-signin__signup">Зарегистрироваться</a>
               </div>
             </form>
           </div>
         </div>
-        <!-------------------------Успешно зарегистрирован ----------------------->
-        <div class="popup">
+        <!-------------------------Успешно зарегистрирован----------------------->
+        <div class="popup popup-invite">
           <div class="popup__content">
-            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-invite__close">
             <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-            <a href="#" class="link popup__link popup__link_large" target="_blank">Войти</a>
+            <a href="#" class="link popup__link popup__link_large popup-invite__login">Войти</a>
           </div>
         </div>
       </main>
       <!----------------------------------------------Footer------------------------------------------->
       <footer class="footer">
-        <p class="footer__copyright">&copy;2020 Supersite, Powered by News API</p>
+        <!-- <p class="footer__copyright">&copy;2020 Supersite, Powered by News API</p>
         <nav class="footer__nav">
           <ul class="footer__menu">
             <li class="footer__menu-item footer__menu-item_normal">
@@ -200,7 +200,7 @@
           <ul class="footer__icon-container">
             <li class="footer__menu-item footer__menu-item_icon">
               <a href="https://github.com/dubovik02/news-explorer-frontend" class="link footer__link" target="_blank">
-                <img src="<%=require('./images/github.png').default%>" alt="https://github.com/dubovik02/news-explorer-frontend" class="footer__icon">
+                <img src="<%=require('./images/github.png').default%>" alt="https://github.com" class="footer__icon">
               </a>
             </li>
             <li class="footer__menu-item footer__menu-item_icon">
@@ -209,9 +209,9 @@
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> -->
       </footer>
     </div>
-    <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 .main-menu {
 }
 
-/*---------------424px-----------------*/
+/*---------------650px-----------------*/
 @media screen and (max-width: 650px) {
   .main-menu {
     position: absolute;
