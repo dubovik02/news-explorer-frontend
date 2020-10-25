@@ -1,0 +1,39 @@
+@import url('./__container/search__container.css');
+@import url('./__input/search__input.css');
+@import url('./__subtitle/search__subtitle.css');
+@import url('./__title/search__title.css');
+@import url('./__button/search__button.css');
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 30.4% 0 30.4%;
+}
+
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .search {
+    margin: 0 20.8% 0 20.8%;
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .search {
+    margin: 0 20.8% 0 20.8%;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .search {
+    margin: 0;
+    padding: 16px 30px;
+  }
+}
+
+
+

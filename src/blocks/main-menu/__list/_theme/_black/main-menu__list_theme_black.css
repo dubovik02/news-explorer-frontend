@@ -1,0 +1,10 @@
+.main-menu_theme_black {
+
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 650px) {
+  .main-menu__list_theme_black {
+    background-color: black;
+  }
+}

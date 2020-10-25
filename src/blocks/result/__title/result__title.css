@@ -1,0 +1,27 @@
+.result__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  margin: 0;
+  margin-bottom: 64px;
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .result__title {
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 32px;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .result__title {
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 24px;
+  }
+}

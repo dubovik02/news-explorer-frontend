@@ -1,0 +1,10 @@
+.main-menu__list_theme_white {
+
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 650px) {
+  .main-menu__list_theme_white {
+    background-color: white;
+  }
+}

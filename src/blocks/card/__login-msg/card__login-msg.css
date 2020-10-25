@@ -1,0 +1,35 @@
+.card__login-msg {
+  display: none;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  padding: 0;
+  position: absolute;
+  top: 24px;
+  left: calc(100% - 24px - 40px - 5px - 182px);
+  width: 182px;
+  height: 40px;
+  margin: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.card__book-button:hover ~ .card__login-msg {
+  display: block;
+}
+
+.card__book-button:hover {
+  background-image: url('../../../images/book-hover.png');
+}
+
+/*---------------1279px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  .card__login-msg  {
+    top: 16px;
+    left: calc(100% - 16px - 40px - 5px - 182px);
+  }
+}

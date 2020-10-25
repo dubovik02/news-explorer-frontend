@@ -1,0 +1,16 @@
+@import url('./_color/_blue/button_color_blue.css');
+@import url('./_color/_white/button_color_white.css');
+
+.button {
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+
+.popup:disabled {
+  color: #B6BCBF;
+  background: #E6E8EB;
+}

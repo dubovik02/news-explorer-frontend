@@ -1,0 +1,5 @@
+.main-menu__link {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}

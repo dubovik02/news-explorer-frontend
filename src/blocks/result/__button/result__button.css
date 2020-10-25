@@ -1,0 +1,28 @@
+.result__button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  background: #FFFFFF;
+  border-radius: 80px;
+  margin: 0 auto;
+  margin-top: 64px;
+  padding: 18px 84px 21px 84px;
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .result__button {
+    margin-top: 30px
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .result__button {
+    width: 100%;
+    padding: 15px 84px;
+  }
+}

@@ -1,0 +1,33 @@
+@import url('../../card/card.css');
+
+.result__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px 16px;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 720px) and (max-width: 768px) {
+  .result__grid {
+    grid-template-columns: repeat(3, 32.55%);
+    grid-gap: 8px 8px;
+  }
+}
+
+/*---------------719px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 719px) {
+  .result__grid {
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 10px 10px;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .result__grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px 10px;
+  }
+}

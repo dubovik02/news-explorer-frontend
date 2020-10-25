@@ -1,0 +1,35 @@
+@import url('./__title/result__title.css');
+@import url('./__grid/result__grid.css');
+@import url('./__form/result__form.css');
+@import url('./__button/result__button.css');
+@import url('./__search-msg/result__search-msg.css');
+@import url('./__title-search-msg/result__title-search-msg.css');
+@import url('./__icon/result__icon.css');
+
+.result {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 104px 80px 104px;
+  background: #F5F6F7;
+}
+
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .result {
+    padding: 40px;
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .result {
+    padding: 40px;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .result {
+    padding: 32px 16px;
+  }
+}

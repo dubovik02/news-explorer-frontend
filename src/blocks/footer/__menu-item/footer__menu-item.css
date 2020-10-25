@@ -1,0 +1,19 @@
+@import url('./_normal/footer__menu-item_normal.css');
+@import url('./_icon/footer__menu-item_icon.css');
+
+.footer__menu-item {
+  list-style: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/*---------------539px-----------------*/
+@media screen and (max-width: 539px) {
+  .footer__menu-item {
+    margin-bottom: 38px;
+  }
+}

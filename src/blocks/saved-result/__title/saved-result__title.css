@@ -1,0 +1,30 @@
+.saved-result__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  max-width: 37%;
+  margin: 0;
+  margin-top: 28px;
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .saved-result__title {
+    font-size: 30px;
+    line-height: 34px;
+    margin-top: 16px;
+    max-width: 43.75%;
+  }
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .saved-result__title {
+    font-size: 30px;
+    line-height: 34px;
+    max-width: calc(100% - 32px);
+    margin-top: 16px;
+  }
+}

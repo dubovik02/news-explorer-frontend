@@ -1,0 +1,11 @@
+.main-menu__item_selected {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 650px) {
+  .main-menu__item_selected {
+    padding: 0;
+  }
+}

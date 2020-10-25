@@ -1,0 +1,11 @@
+.card__image-container {
+  position: relative;
+  height: 272px;
+}
+
+/*---------------424px-----------------*/
+@media screen and (max-width: 424px) {
+  .card {
+    width: 100%;
+  }
+}

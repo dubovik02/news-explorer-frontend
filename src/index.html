@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Поиск новостей">
+    <meta name="author" content="A. Dubovik">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsExplorer. Новости - это просто</title>
+    <link rel="icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+</head>
+<body class="body">
+    <div class="page">
+      <!----------------------------------------------Содержание---------------------------------------------------->
+      <main class="content">
+        <!----------------------------------------------Заголовок------------------------------------------------>
+        <div class="main-section">
+          <header class="header header_theme_black">
+            <p class="header__label header__label header__label_theme_black">NewsExplorer</p>
+            <nav class="main-menu main-menu_theme_black">
+              <ul class="main-menu__list main-menu__list_theme_black">
+                <li class="main-menu__item main-menu__item_selected main-menu__item_theme_black">
+                  <a class="link main-menu__link" href="./index.html">Главная</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="link main-menu__link" href="./saved.html" target="_blank">Сохраненные статьи</a>
+                  <!--для отладки открываем пока в новом окне. в продакшене удалится-->
+                </li>
+                <li class="main-menu__item">
+                  <ul class="main-menu__container main-menu__container_theme_black">
+                    <li class="main-menu__item">
+                      <a class="link main-menu__link" href="#" target="_blank">
+                        <p class="main-menu__username">Грета</p>
+                        <img src="<%=require('./images/logout.png').default%>" alt="выход" class="main-menu__ico">
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <button class="header__button header__icon header__icon_theme_black_show"></button>
+          </header>
+          <!----------------------------------------------Поиск------------------------------------------------>
+          <section class="search">
+            <h1 class="search__title">Что в мире творится?</h1>
+            <p class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+            <form class="search__container">
+              <input class="input search__input" type="text" id="search-input" placeholder="Введите тему новости">
+              <button class="button button_color_blue search__button">Искать</button>
+            </form>
+          </section>
+        </div>
+        <!----------------------------------------------Результаты поиска------------------------------------------------>
+        <section class="result">
+          <h2 class="result__title">Результаты поиска</h2>
+          <div class="result__grid">
+            <a class="link card" href="#" target="_blank">
+              <div class="card__image-container">
+                <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
+                <div class="card__book-button card__book-icon card__book-icon_normal"></div>
+                <div class="card__login-msg">Войдите, чтобы сохранять статьи</div>
+              </div>
+              <div class="card__description">
+                <p class="card__date">7 октября, 2020</p>
+                <h3 class="card__title">Камчатка .......  </h3>
+                <p class="card__subtitle">Камчатка is very interesting place</p>
+                <p class="card__source">Медуза Инфо</p>
+              </div>
+            </a>
+            <a class="link card" href="#" target="_blank">
+              <div class="card__image-container">
+                <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
+                <div class="card__book-button card__book-icon card__book-icon_normal"></div>
+                <div class="card__login-msg">Войдите, чтобы сохранять статьи</div>
+              </div>
+              <div class="card__description">
+                <p class="card__date">8 октября, 2020</p>
+                <h3 class="card__title">Опять вопросы? Давайте разберемся в сути!</h3>
+                <p class="card__subtitle">CSS flexbox (Flexible Box Layout Module) — модуль макета гибкого контейнера — представляет собой способ компоновки элементов, в основе лежит идея оси.</p>
+                <p class="card__source">html5book.ru</p>
+              </div>
+            </a>
+            <a class="link card" href="#" target="_blank">
+              <div class="card__image-container">
+                <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="рисунок">
+                <div class="card__book-button card__book-icon card__book-icon_marked"></div>
+              </div>
+              <div class="card__description">
+                <p class="card__date">10 октября, 2020</p>
+                <h3 class="card__title">Как же прижать Footer карточки к низу??? Не простая задача, но подъемная.</h3>
+                <p class="card__subtitle">Мы хотим, чтобы наш верхний и нижний блоки занимали такое количества места, какое им нужно, и
+                  все остальное было зарезервировано для основного раздела контента. Для такого макета, чтобы через CSS прижать футер
+                  (flexbox), все выглядит следующим образом</p>
+                <p class="card__source">Breaking-News</p>
+              </div>
+            </a>
+          </div>
+          <form class="result__form">
+            <button class="button button_color_white result__button">Показать еще</button>
+          </form>
+        </section>
+        <!----------------------------------------------Ожидание загрузки------------------------------------------------>
+        <section class="result">
+          <i class="circle-preloader"></i>
+          <p class="result__search-msg">Идет поиск новостей...</p>
+        </section>
+        <!----------------------------------------------Нет результатов------------------------------------------------>
+        <section class="result">
+          <div class="result__icon result__icon_notfound"></div>
+          <p class="result__title-search-msg">Ничего не найдено</p>
+          <p class="result__search-msg">К сожалению по вашему запросу ничего не найдено</p>
+        </section>
+        <!----------------------------------------------Автор------------------------------------------------>
+        <section class="author">
+          <img src="<%=require('./images/author.png').default%>" alt="автор" class="author__photo">
+          <div class="author__container">
+            <h2 class="author__title">Об авторе</h2>
+            <p class="author__subtitle">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+              чем вы занимаетесь, какими технологиями разработки владеете.
+            </p>
+            <p class="author__subtitle">Также можно рассказать о процессе обучения
+              в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+            </p>
+          </div>
+        </section>
+        <!-------------------------Регистрация  пользователя ----------------------->
+        <div class="popup">
+          <div class="popup__content">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
+            <h3 class="popup__title">Регистрация</h3>
+            <form class="popup__form" name="registration">
+              <label for="email-field" class="popup__label">Email</label>
+              <input type="email" name="email" id="email-field" class="input popup__input" placeholder="Введите email">
+              <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
+
+              <label for="password-field" class="popup__label">Пароль</label>
+              <input type="password" name="password"  id="password-field" class="input popup__input" placeholder="Введите пароль">
+              <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
+
+              <label for="name-field" class="popup__label">Имя</label>
+              <input type="text" name="name" id="name-field" class="input popup__input" placeholder="Введите свое имя">
+              <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
+
+              <p class="popup__user-exists">Такой пользователь уже есть</p>
+
+              <button type="button" class="button button_color_blue popup__button">Зарегистрироваться</button>
+
+              <div class="popup__login-container">
+                <p class="popup__text">или</p>
+                <a href="#" class="link popup__link popup__link_small" target="_blank">Войти</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-------------------------Вход ----------------------->
+        <div class="popup">
+          <div class="popup__content">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
+            <h3 class="popup__title">Вход</h3>
+            <form class="popup__form" name="registration">
+              <label for="email-field-login" class="popup__label">Email</label>
+              <input type="email" name="email" id="email-field-login" class="input popup__input" placeholder="Введите email">
+              <p class="popup__error-label popup__error-label-name">Это обязательное поле</p>
+
+              <label for="password-field-login" class="popup__label">Пароль</label>
+              <input type="password" name="password" id="password-field-login" class="input popup__input" placeholder="Введите пароль">
+              <p class="popup__error-label popup__error-label-password">Это обязательное поле</p>
+
+              <button type="button" class="button button_color_blue popup__button">Войти</button>
+
+              <div class="popup__login-container">
+                <p class="popup__text">или</p>
+                <a href="#" class="link popup__link popup__link_small" target="_blank">Зарегистрироваться</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-------------------------Успешно зарегистрирован ----------------------->
+        <div class="popup">
+          <div class="popup__content">
+            <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup-add__close">
+            <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+            <a href="#" class="link popup__link popup__link_large" target="_blank">Войти</a>
+          </div>
+        </div>
+      </main>
+      <!----------------------------------------------Footer------------------------------------------->
+      <footer class="footer">
+        <p class="footer__copyright">&copy;2020 Supersite, Powered by News API</p>
+        <nav class="footer__nav">
+          <ul class="footer__menu">
+            <li class="footer__menu-item footer__menu-item_normal">
+              <a href="./index.html" class="link footer__link">Главная</a>
+            </li>
+            <li class="footer__menu-item footer__menu-item_normal">
+              <a href="https://praktikum.yandex.ru" class="link footer__link" target="_blank">Яндекс.Практикум</a>
+            </li>
+          </ul>
+          <ul class="footer__icon-container">
+            <li class="footer__menu-item footer__menu-item_icon">
+              <a href="https://github.com/dubovik02/news-explorer-frontend" class="link footer__link" target="_blank">
+                <img src="<%=require('./images/github.png').default%>" alt="https://github.com/dubovik02/news-explorer-frontend" class="footer__icon">
+              </a>
+            </li>
+            <li class="footer__menu-item footer__menu-item_icon">
+              <a href="https://facebook.com" class="link footer__link" target="_blank">
+                <img src="<%=require('./images/facebook.png').default%>" alt="https://facebook.com" class="footer__icon">
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+    <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+</html>

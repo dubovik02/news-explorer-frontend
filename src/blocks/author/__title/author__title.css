@@ -1,0 +1,41 @@
+.author__title {
+  margin: 0;
+  margin-top: 51px;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+/*---------------1279px-----------------*/
+@media screen and (min-width: 1025px) and (max-width: 1279px) {
+  .author__title {
+    margin-top: 0;
+  }
+}
+
+/*---------------1024px-----------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .author__title {
+    margin-top: 0;
+  }
+}
+
+/*---------------768px-----------------*/
+@media screen and (min-width: 701px) and (max-width: 768px) {
+  .author__title {
+    margin-top: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+/*---------------700px-----------------*/
+@media screen and (max-width: 700px) {
+  .author__title {
+    margin-top: 24px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

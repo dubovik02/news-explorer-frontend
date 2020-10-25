@@ -1,0 +1,6 @@
+.card__trash-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-image: url('../../../images/trash-hover.png');
+}

@@ -1,0 +1,9 @@
+@import url('./_theme/_black/_close/header__icon_theme_black_close.css');
+@import url('./_theme/_black/_show/header__icon_theme_black_show.css');
+@import url('./_theme/_white/_close/header__icon_theme_white_close.css');
+@import url('./_theme/_white/_show/header__icon_theme_white_show.css');
+
+.header__icon {
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,9 @@
+.result__title-search-msg {
+  margin: 32px auto auto auto;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  max-width: 300px;
+}
