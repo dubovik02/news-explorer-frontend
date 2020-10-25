@@ -10,13 +10,6 @@
 .main-menu {
 }
 
-/*---------------651px-----------------*/
-@media screen and (min-width: 651px) {
-  .main-menu {
-    display: block;
-  }
-}
-
 /*---------------650px-----------------*/
 @media screen and (max-width: 650px) {
   .main-menu {
